@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(92, 91, 91, 1);
+}
+
+#container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 90%;
+}
+#viewRight{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: 4px solid black;
+  background-color: #fff;
+  height: 99%;
+  width: 20.3%;
+}
+#viewLeft{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  height: 100%;
+  width: 79.7%;
+}
+#topMain{
+  align-items:flex-start;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  height: 50%;
+}
+#middleMain{
+  display: flex;
+  align-items: center;
+  color: #fff;
+  height: 25%;
+}
+#bottomMain{
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+  height: 25%;
+}
+#hello{
+  margin: 5% 2% 1% 4%;
+  font-size: 5.6rem;
+}
+#Iam{
+  margin: 2% 2% 1% 4%;
+  font-size: 5.6rem;
+}
+
+#decorationMain{
+  transform: rotate(-45deg);
+  margin-left: 1%;
+  background-color: rgb(255, 255, 255);
+  height: 4px;
+  width: 10%;
+}
+#decorationMain2{
+  margin-left: 1%;
+  background-color: rgb(255, 255, 255);
+  height: 4px;
+  width: 35%;
+}
+#start{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 3.6rem;
+}
+
+#link{
+  color: #fff;
+  text-decoration: none;
+}
+
+/* menu burger */
+#burger {
+  width:40px;
+  height:4px;
+  background:rgb(0, 0, 0);
+  display:inline-block;
+  position:relative;
+}
+#burger::before,
+#burger::after {
+  content:'';
+  width:40px;
+  height:4px;
+  background:rgb(0, 0, 0);
+  display:inline-block;
+  position:absolute;
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+#burger::before {
+  top:-7px;
+}
+#burger::after {
+  top:7px;
+}
+
+#burger.open {
+  background:transparent;
+}
+#burger.open::before {
+  transform: rotate(45deg);
+  top:0;
+}
+#burger.open::after {
+  transform: rotate(-45deg);
+  top:0;
+}
+
+
+ul {
+  list-style-type: none;
+  background:rgb(0, 0, 0);
+  width:90%;
+  left:0;
+  top:100%;
+  padding:10px 0;
+  transform:scaleY(0);
+  transform-origin:center top;
+  transition:all 0.3s ease;
+}
+ul.open {
+  transform:scaleY(1);
+}
+ul li {
+  padding:10px 0;
+  text-align:center
+}
+nav{
+  width: 90%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+}
