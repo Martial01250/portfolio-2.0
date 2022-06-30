@@ -1,24 +1,33 @@
+@font-face {
+  font-family: "inter";
+  src: url(font/static/Inter-Regular.ttf);
+}
+
 * {
+  font-family: "inter";
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(92, 91, 91, 1);
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(92, 91, 91, 1);
 }
 
-#container{
+/** Layout 1st page */
+
+#container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
   width: 90%;
 }
-#viewRight{
+#viewRight {
+  box-shadow: 10px 5px 15px rgb(29, 29, 29);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +37,8 @@ body{
   height: 99%;
   width: 20.3%;
 }
-#viewLeft{
+#viewLeft {
+  box-shadow: -10px -5px 15px rgb(29, 29, 29);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,133 +46,293 @@ body{
   height: 100%;
   width: 79.7%;
 }
-#topMain{
-  align-items:flex-start;
+#topMain {
+  align-items: flex-start;
   justify-content: space-around;
   display: flex;
   flex-direction: column;
   color: #fff;
   height: 50%;
 }
-#middleMain{
+#middleMain {
   display: flex;
   align-items: center;
   color: #fff;
   height: 25%;
 }
-#bottomMain{
+#bottomMain {
   display: flex;
   justify-content: center;
-  align-items:flex-end;
-  height: 25%;
+  align-items: flex-end;
+  height: 20%;
 }
-#hello{
+#hello {
   margin: 5% 2% 1% 4%;
   font-size: 5.6rem;
 }
-#Iam{
+#Iam {
   margin: 2% 2% 1% 4%;
   font-size: 5.6rem;
 }
 
-#decorationMain{
+#decorationMain {
   transform: rotate(-45deg);
   margin-left: 1%;
   background-color: rgb(255, 255, 255);
-  height: 4px;
+  height: 3px;
   width: 10%;
 }
-#decorationMain2{
+#decorationMain2 {
   margin-left: 1%;
   background-color: rgb(255, 255, 255);
-  height: 4px;
-  width: 35%;
+  height: 3px;
+  width: 30%;
 }
-#start{
+#start {
   color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 3.6rem;
 }
 
-#link{
+#link {
   color: #fff;
   text-decoration: none;
 }
+#year,
+#year2 {
+  font-size: 5.4rem;
+  transform: rotate(-90deg);
+}
 
-/* menu burger */
+#decorationRight {
+  height: 25%;
+  width: 1%;
+  background-color: black;
+}
+
+/** menu burger */
 #burger {
-  width:40px;
-  height:4px;
-  background:rgb(0, 0, 0);
-  display:inline-block;
-  position:relative;
+  width: 40px;
+  height: 4px;
+  background: rgb(0, 0, 0);
+  display: inline-block;
+  position: relative;
 }
 #burger::before,
 #burger::after {
-  content:'';
-  width:40px;
-  height:4px;
-  background:rgb(0, 0, 0);
-  display:inline-block;
-  position:absolute;
+  content: "";
+  width: 40px;
+  height: 4px;
+  background: rgb(0, 0, 0);
+  display: inline-block;
+  position: absolute;
   transform-origin: center;
   transition: all 0.3s ease;
 }
 #burger::before {
-  top:-7px;
+  top: -7px;
 }
 #burger::after {
-  top:7px;
+  top: 7px;
 }
 
 #burger.open {
-  background:transparent;
+  background: transparent;
 }
 #burger.open::before {
   transform: rotate(45deg);
-  top:0;
+  top: 0;
 }
 #burger.open::after {
   transform: rotate(-45deg);
-  top:0;
+  top: 0;
 }
-
 
 ul {
   list-style-type: none;
-  background:rgb(0, 0, 0);
-  width:90%;
+  background: rgb(0, 0, 0);
+  width: 90%;
   height: 100%;
-  left:0;
-  top:100%;
-  padding:10px 0;
-  transform:scaleY(0);
-  transform-origin:center top;
-  transition:all 0.3s ease;
+  left: 0;
+  top: 100%;
+  padding: 10px 0;
+  transform: scaleY(0);
+  transform-origin: center top;
+  transition: all 0.3s ease;
 }
 ul.open {
   margin-top: 12px;
-  transform:scaleY(1);
+  transform: scaleY(1);
 }
 ul li {
-  padding:10px 0;
-  text-align:center
+  padding: 10px 0;
+  text-align: center;
 }
-nav{
+nav {
   width: 90%;
   height: 25%;
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
 }
 
-#year , #year2{
-  font-size: 5.6rem;
+#year,
+#year2 {
+  font-size: 5.4rem;
   transform: rotate(-90deg);
 }
 
-#decorationRight{
-  height: 30%;
+#decorationRight {
+  height: 25%;
   width: 1%;
   background-color: black;
 }
+/* ***************************** END *********************************** */
+
+/* * Layout about-me */
+
+/* *Left part */
+#windowLeft {
+  box-shadow: -10px -5px 15px rgb(29, 29, 29);
+  color: #fff;
+  background-color: black;
+  height: 100%;
+  width: 49.9%;
+}
+
+#windowRight {
+  box-shadow: 10px 5px 15px rgb(29, 29, 29);
+  background-color: black;
+  height: 100%;
+  width: 49.9%;
+}
+
+#windowSeparation {
+  background-color: rgb(224, 224, 224);
+  outline: #fff 1px solid;
+  box-shadow: 10px 5px 15px#fff;
+  height: 100%;
+  width: 1px;
+}
+
+#winLeftTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 10%;
+}
+
+#winLeftMiddle {
+  display: flex;
+  color: #fff;
+  width: 100%;
+  height: 35%;
+}
+
+#pictureFrame {
+  margin-left: 4px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 30%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+#photoOfMe {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 5px;
+  width: 95%;
+  height: 85%;
+  background-image: url(./imgs/IMG_20220628_120019.jpg);
+  background-size: cover;
+}
+#rectangle {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+}
+
+#informationFrame {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#information {
+  margin-top: 28%;
+}
+
+#winLeftBottom {
+  display: flex;
+  height: 50%;
+}
+#pageNumber {
+  color: #fff;
+  width: 50%;
+  text-align: end;
+}
+#study,
+#experience {
+  margin-left: 5px;
+  margin-top: 8.5%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#experience {
+  width: 50%;
+}
+#Title {
+  text-decoration: underline;
+  text-decoration-color: #fff;
+}
+/* ***************************** END *********************************** */
+
+/* * Right part about-me*/
+#windowRight {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  box-shadow: 10px 5px 15px rgb(29, 29, 29);
+  background-color: black;
+  height: 100%;
+  width: 49.9%;
+  color: #fff;
+}
+
+#winRightTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+}
+#winRightMid,
+#winRightMid2,
+#winRightBottom,
+#winRightBottom2 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 42.5%;
+}
+
+#nextPage {
+  width: 50%;
+  text-align: end;
+  color: #fff;
+  font-size: 2rem;
+}
+#nextPageLink {
+  text-decoration: none;
+  color: #fff;
+}
+#nextPageLink :hover {
+  cursor: pointer;
+}
+
+/* ***************************** END ************************/
